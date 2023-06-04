@@ -1,14 +1,3 @@
-var activecam = document.getElementById("activecam");
-var btn = document.getElementById("btn");
-var cameraname = document.getElementById("cameraname");
-var scancontent = document.getElementById("scancontent");
-
-btn.onclick = function(){
-    activecam.style.display = "block";
-    cameraname.style.display = "block";
-    scancontent.style.display = "block";
-}
-
 function generateContent() { 
    var app = new Vue({ 
    el: '#app', 
@@ -18,7 +7,14 @@ function generateContent() {
      cameras: [], 
      scans: [] 
    }, 
-   mounted: function () { 
+   mounted: function () {
+     var activecam = document.getElementById("activecam");
+     var btn = document.getElementById("btn");
+     var cameraname = document.getElementById("cameraname");
+     var scancontent = document.getElementById("scancontent");
+     activecam.style.display = "block";
+     cameraname.style.display = "block";
+     scancontent.style.display = "block";
      var self = this; 
      self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 7 }); 
      self.scanner.addListener('scan', function (content, image) { 
