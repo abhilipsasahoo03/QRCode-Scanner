@@ -12,9 +12,9 @@ function generateContent() {
      var btn = document.getElementById("btn");
      var cameraname = document.getElementById("cameraname");
      var scancontent = document.getElementById("scancontent");
-     activecam.style.display = "block";
-     cameraname.style.display = "block";
-     scancontent.style.display = "block";
+     activecam.style.visibility = "visible";
+     cameraname.style.visibility = "visible";
+     scancontent.style.visibility = "visible";
      var self = this; 
      self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 7 }); 
      self.scanner.addListener('scan', function (content, image) { 
