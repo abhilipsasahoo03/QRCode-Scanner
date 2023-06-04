@@ -45,7 +45,7 @@
            </ul>
            <ul v-else>
             <transition-group name="scans" tag="ul"> 
-              <li v-for="scan in scans" :key="scan.date" :title="scan.content">{{ scan.content }}</li> 
+              <li v-for="scan in scans" :key="scan.date" :title="scan.content" id="scancontent" style="display: none;">{{ scan.content }}</li> 
             </transition-group>
            </ul>
          </section> 
