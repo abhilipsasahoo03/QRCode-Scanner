@@ -1,3 +1,14 @@
+var activecam = document.getElementById("activecam");
+var btn = document.getElementById("btn");
+var cameraname = document.getElementById("cameraname");
+var scancontent = document.getElementById("scancontent");
+
+btn.onclick = function(){
+    activecam.style.display = "block";
+    cameraname.style.display = "block";
+    scancontent.style.display = "block";
+}
+
 function generateContent() { 
    var app = new Vue({ 
    el: '#app', 
