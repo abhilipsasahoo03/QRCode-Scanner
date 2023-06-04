@@ -1,12 +1,3 @@
-var btn = document.getElementById("btn");
-var activecam = document.getElementById("activecam");
-var cameraname = document.getElementById("cameraname");
-
-if (btn.clicked != true) {
-  activecam.style.display = "none";
-  cameraname.style.display = "none";
-}
-
 function generateContent() { 
    var app = new Vue({ 
    el: '#app', 
