@@ -31,8 +31,8 @@
            <ul> 
              <li v-if="cameras.length === 0" class="empty">No cameras found</li> 
              <li v-for="camera in cameras"> 
-               <span v-if="camera.id == activeCameraId" :title="formatName(camera.name)" class="active" id="activecam" style="visibility: hidden;">{{ formatName(camera.name) }}</span> 
-               <span v-if="camera.id != activeCameraId" :title="formatName(camera.name)" style="visibility: hidden;"> 
+               <span v-if="camera.id == activeCameraId" :title="formatName(camera.name)" class="active" id="activecam" style="display: none;">{{ formatName(camera.name) }}</span> 
+               <span v-if="camera.id != activeCameraId" :title="formatName(camera.name)" style="display: none;"> 
                  <a @click.stop="selectCamera(camera)" id="cameraname">{{ formatName(camera.name) }}</a> 
                </span> 
              </li> 
