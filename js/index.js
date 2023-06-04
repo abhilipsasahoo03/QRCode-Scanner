@@ -8,12 +8,10 @@ function generateContent() {
      scans: [] 
    }, 
    mounted: function () {
-     var activecam = document.getElementById("activecam");
      var btn = document.getElementById("btn");
-     var cameraname = document.getElementById("cameraname");
+     var cameralist = document.getElementById("cameralist");
      var scancontent = document.getElementById("scancontent");
-     activecam.style.visibility = "visible";
-     cameraname.style.visibility = "visible";
+     cameralist.style.visibility = "visible";
      scancontent.style.visibility = "visible";
      var self = this; 
      self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 7 }); 
