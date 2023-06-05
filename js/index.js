@@ -33,10 +33,12 @@ function generateContent() {
        this.activeCameraId = camera.id; 
        this.scanner.start(camera); 
      },
-     stopCamera: function (camera) {
+     stopCamera: Instascan.Camera.getCameras().then(function (camera) {
        this.activeCameraId = null;
        this.scanner.stop();
-     }
+     }).catch(function (e) {
+       console.error(e);
+     });
    } 
  }); 
  }
