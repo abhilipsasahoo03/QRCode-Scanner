@@ -1,14 +1,3 @@
-function scanQR() {
-     var btn = document.getElementById("btn");
-     var cameralist = document.getElementById("cameralist");
-     var scancontent = document.getElementById("scancontent");
-     cameralist.style.visibility = "visible";
-     scancontent.style.visibility = "visible";
-
-     generateContent();
-}
-
-
 function generateContent() { 
    var app = new Vue({ 
    el: '#app', 
@@ -47,6 +36,13 @@ function generateContent() {
      } 
    } 
  }); 
- } 
- 
-scanQR();
+ }
+
+function scanQR() {
+     var btn = document.getElementById("btn");
+     var cameralist = document.getElementById("cameralist");
+     var scancontent = document.getElementById("scancontent");
+     cameralist.style.visibility = "visible";
+     scancontent.style.visibility = "visible";
+     generateContent();
+}
