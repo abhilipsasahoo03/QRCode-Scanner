@@ -36,6 +36,7 @@ function generateContent() {
      stopCamera: function (camera) {
        this.activeCameraId = null;
        this.scanner.stop(camera);
+     }
    } 
  }); 
  }
