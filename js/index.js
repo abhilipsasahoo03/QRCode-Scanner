@@ -32,11 +32,6 @@ function generateContent() {
      selectCamera: function (camera) { 
        this.activeCameraId = camera.id; 
        this.scanner.start(camera); 
-     },
-     stopCamera: function (camera) {
-       this.cameras = [];
-       this.activeCameraId = null;
-       this.scanner.stop();
      }
    } 
  }); 
