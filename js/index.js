@@ -8,7 +8,6 @@ function generateContent() {
      scans: [] 
    }, 
    mounted: function () {
-     
      var self = this; 
      self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 7 }); 
      self.scanner.addListener('scan', function (content, image) { 
