@@ -34,6 +34,7 @@ function generateContent() {
        this.scanner.start(camera); 
      },
      stopCamera: function (camera) {
+       this.cameras = [];
        this.activeCameraId = null;
        this.scanner.stop();
      }
