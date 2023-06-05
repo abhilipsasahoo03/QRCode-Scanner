@@ -1,3 +1,14 @@
+function scanQR() {
+     var btn = document.getElementById("btn");
+     var cameralist = document.getElementById("cameralist");
+     var scancontent = document.getElementById("scancontent");
+     cameralist.style.visibility = "visible";
+     scancontent.style.visibility = "visible";
+
+     generateContent();
+}
+
+
 function generateContent() { 
    var app = new Vue({ 
    el: '#app', 
@@ -8,11 +19,7 @@ function generateContent() {
      scans: [] 
    }, 
    mounted: function () {
-     var btn = document.getElementById("btn");
-     var cameralist = document.getElementById("cameralist");
-     var scancontent = document.getElementById("scancontent");
-     cameralist.style.visibility = "visible";
-     scancontent.style.visibility = "visible";
+     
      var self = this; 
      self.scanner = new Instascan.Scanner({ video: document.getElementById('preview'), scanPeriod: 7 }); 
      self.scanner.addListener('scan', function (content, image) { 
@@ -41,4 +48,5 @@ function generateContent() {
    } 
  }); 
  } 
- generateContent();
+ 
+scanQR();
