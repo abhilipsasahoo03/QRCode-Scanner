@@ -29,11 +29,14 @@ function generateContent() {
    methods: { 
      formatName: function (name) { 
        return name || '(unknown)'; 
-     }, 
+     },
      selectCamera: function (camera) { 
        this.activeCameraId = camera.id; 
        this.scanner.start(camera); 
-     } 
+     },
+     stopCamera: function (camera) {
+       this.activeCameraId = null;
+       this.scanner.stop(camera);
    } 
  }); 
  }
