@@ -12,7 +12,7 @@ body, html {
  } 
   
  button { 
-   display: block; 
+   display: inline-block;
    background-color: #f09078; 
    color: white; 
    width: 7.5%; 
